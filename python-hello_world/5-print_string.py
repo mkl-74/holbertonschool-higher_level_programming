@@ -8,3 +8,4 @@ str = "Holberton School"
 #print(sum)
 
 print(str*3)
+print(str[:10])
