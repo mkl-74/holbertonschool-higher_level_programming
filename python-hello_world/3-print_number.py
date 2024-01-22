@@ -3,4 +3,4 @@
 #print number with text
 
 number = 98
-print("%s" ' ' "Battery street" % number)
+print("%d" ' ' "Battery street" % number)
