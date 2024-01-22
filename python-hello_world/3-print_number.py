@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
 #print number with text
 
 number = 98
-print("%d" ' ' "Battery street" % number)
+print(f"{number} Battery street")
