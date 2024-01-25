@@ -5,4 +5,4 @@ for nbr1 in range(0, 9):
         if nbr1 == nbr2:
             continue
         if nbr1 < nbr2:
-            print(f"{nbr1}{nbr2},", end=' ')
+            print("{}{},".format(nbr1, nbr2), end=' ')
