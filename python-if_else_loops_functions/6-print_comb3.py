@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 for nbr1 in range(0, 9):
     for nbr2 in range(1, 10):
