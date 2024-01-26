@@ -2,7 +2,7 @@
 import sys
 
 def main():
-    arg_count = len(sys.argv) - 1  # Exclure le nom du script lui-même
+    arg_count = len(sys.argv) - 1
 
     if arg_count == 0:
         print(f"{arg_count} arguments.")
