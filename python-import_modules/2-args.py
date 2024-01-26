@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 import sys
 
+### prints the number of and the list of its arguments
+
 def main():
     arg_count = len(sys.argv) - 1
 
