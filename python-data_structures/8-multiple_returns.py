@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 
+# function that returns a tuple with the
+# length of a string and its first character.
+
+
+
 def multiple_returns(sentence):
-    if sentence:
-        if 'a' <= sentence[0] <= 'z':
-            return len(sentence), f"First character: {sentence[0]}"
-        else:
-            return len(sentence), "Non-alphabetic first character"
+    if len(sentence) == 0:
+        first_letter = None
     else:
-        return 0, "Empty string"
+        first_letter = sentence[0]
+    return len(sentence), first_letter
