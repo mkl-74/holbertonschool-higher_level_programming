@@ -2,7 +2,7 @@
 
 # -*- coding: utf-8 -*-
 
-class square():
+class square:
     pass
 
     """
