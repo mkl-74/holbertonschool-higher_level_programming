@@ -2,5 +2,13 @@
 
 # -*- coding: utf-8 -*-
 
-class square:
+class square():
     pass
+
+    """
+    Create a empty class square
+    Args:
+        empty
+    Return:
+        empty
+    """
