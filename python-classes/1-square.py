@@ -2,7 +2,7 @@
 
 """1-square.py : Write a class Square that defines a square by: (based on 0-square.py)"""
 
-class square:
+class Square:
 
     def __init__(self, size):
-        self.size = "size"
+        self.square = "size"
