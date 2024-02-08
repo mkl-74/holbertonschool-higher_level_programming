@@ -1,14 +1,13 @@
 #!/usr/bin/python3
+"""square modul"""
 
-
-""" 2-square.py : Write a class Square that defines a square by:
-(based on 1-square.py)"""
 
 class Square:
-    """Write a class Square that defines a square by: (based on 1-square.py)"""
+    """class that defines a square"""
     def __init__(self, size=0):
-        self.__size = size
+        """ init new square with his size is an >0 int in private attribute"""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        if size < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
+        self.__size = size
