@@ -1,1 +1,26 @@
 say_my_name = __import__('3-say_my_name').say_my_name
+
+
+
+>>> say_my_name("", "")
+My name is
+
+>>> say_my_name("Ragnard", "Lodbrock")
+My name is Ragnard Lodbrock
+
+>>> say_my_name("20", "5")
+My name is 20 5
+
+>>> say_my_name(float, "5")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/workspaces/holbertonschool-higher_level_programming/python-test_driven_development/3-say_my_name.py", line 8, in say_my_name
+    raise TypeError("first_name must be a string ")
+TypeError: first_name must be a string
+
+>>> say_my_name("Mick", 1024)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/workspaces/holbertonschool-higher_level_programming/python-test_driven_development/3-say_my_name.py", line 10, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
