@@ -1,4 +1,13 @@
+-------------------------------
+-------------------------------
+    Exemple of unit test
+-------------------------------
+-------------------------------
+
+
 add_integer = __import__('0-add_integer').add_integer
+
+
 
 >>> add_integer(1, 2)
 3
@@ -20,4 +29,10 @@ Traceback (most recent call last):
   File "/workspaces/holbertonschool-higher_level_programming/python-test_driven_development/0-add_integer.py", line 7, in add_integer
     raise TypeError("a must be an integer")
 TypeError: a must be an integer
->>> 
+>>>
+
+>>> add_integer(1, 2, 5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+>>>
