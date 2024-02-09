@@ -29,3 +29,18 @@ TypeError: size must be an integer
 >>> print_square(none)
 Traceback (most recent call last):
 NameError: name 'none' is not defined. Did you mean: 'None'?
+
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+>>> print_square(1)
+#
