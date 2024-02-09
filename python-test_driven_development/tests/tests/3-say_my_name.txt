@@ -1,16 +1,29 @@
+===================================================
+Tests for text_indentation in 3-say_my_name.py
+===================================================
+
+
 >>> say_my_name = __import__('3-say_my_name').say_my_name
->>> matrix = [[1, 2, 3], [4, 5, 6]]
->>> matrix_divided(matrix, 3)
-[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
->>> matrix_divided(matrix, 0)
+
+>>> say_my_name("", "")
+My name is
+
+>>> say_my_name("Ragnard", "Lodbrock")
+My name is Ragnard Lodbrock
+
+>>> say_my_name("20", "5")
+My name is 20 5
+
+>>> say_my_name(float, "5")
 Traceback (most recent call last):
-ZeroDivisionError: division by zero
->>> matrix_divided("not a matrix", 2)
+  File "<stdin>", line 1, in <module>
+  File "/workspaces/holbertonschool-higher_level_programming/python-test_driven_development/3-say_my_name.py", line 8, in say_my_name
+    raise TypeError("first_name must be a string ")
+TypeError: first_name must be a string
+
+>>> say_my_name("Mick", 1024)
 Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists) of integers/floats
->>> matrix_divided([[1, 2], [3]], 2)
-Traceback (most recent call last):
-TypeError: Each row of the matrix must have the same size
->>> matrix_divided([[1, 2], [3, 4]], "5")
-Traceback (most recent call last):
-TypeError: div must be a number
+  File "<stdin>", line 1, in <module>
+  File "/workspaces/holbertonschool-higher_level_programming/python-test_driven_development/3-say_my_name.py", line 10, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
