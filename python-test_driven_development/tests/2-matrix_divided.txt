@@ -1,0 +1,10 @@
+matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+>>> matrix_divided([2, 4, 5], [10, 2])
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided([2, 4, 5], [10, 2])
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
