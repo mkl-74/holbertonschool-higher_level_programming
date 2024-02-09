@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module rint a text with two space line when meet '.' or ':' or '?"""
 
 
 def text_indentation(text):
