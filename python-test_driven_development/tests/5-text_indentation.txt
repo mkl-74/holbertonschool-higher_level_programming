@@ -1,14 +1,18 @@
 text_indentation = __import__('5-text_indentation').text_indentation
 
+def text_indentation(text):
+"""indent texte with 2 line after '.' ':' '?'"""
 
-
+test with none parameter
 >>> text_indentation(none)
 Traceback (most recent call last):
 NameError: name 'text_indentation' is not defined
 
+test with string in parameter
 text>>> text_indenta("write")
 write>>>
 
+test with string and dot
 >>> text_indentation("text..")
 text.
 
