@@ -1,0 +1,16 @@
+text_indentation = __import__('5-text_indentation').text_indentation
+
+
+
+>>> text_indentation(none)
+Traceback (most recent call last):
+NameError: name 'text_indentation' is not defined
+
+text>>> text_indenta("write")
+write>>>
+
+>>> text_indentation("text..")
+text.
+
+.
+
