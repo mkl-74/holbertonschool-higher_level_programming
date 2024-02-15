@@ -2,4 +2,5 @@
 """write a empty class"""
 
 class BaseGeometry:
+    """create a empty class"""
     pass
