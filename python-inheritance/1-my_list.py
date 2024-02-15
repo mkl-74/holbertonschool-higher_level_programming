@@ -5,11 +5,12 @@
 
 
 class MyList(list):
-    """"""
+    """a subclass of list"""
+    def __init__(self):
+        """initializes the object"""
+        super().__init__()
+
     def print_sorted(self):
-        """
-        Args : list is a list
-        object : Mylist its a child of list
-        """
-        sorted_list = sorted(self)
-        print(sorted_list)
+        """prints the sorted list"""
+        print(sorted(self))
+        
