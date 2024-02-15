@@ -2,7 +2,7 @@
 
 
 """Write a class MyList that inherits from list:"""
-class MyList(list):
-
-    def print_sorted(self):
-            self.__init__(list)
+class MyList:
+    pass
+class list(MyList):
+    pass
