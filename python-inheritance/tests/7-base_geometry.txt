@@ -6,7 +6,7 @@
 <class '7-base_geometry.BaseGeometry'>
 
 Test with an integer : OK
->>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("age", 12)
 12
 >>> bg.integer_validator("width", 89)
 89
@@ -36,3 +36,6 @@ Test with float :
 >>> bg.integer_validator("my_int", 12.5)
 Traceback (most recent call last):
 TypeError: <name> must be an integer
+
+Test with string :
+bg.integer_validator("name", "John")
