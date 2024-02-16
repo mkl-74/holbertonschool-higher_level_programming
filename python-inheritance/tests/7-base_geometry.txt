@@ -5,19 +5,37 @@
 >>> type(bg)
 <class '7-base_geometry.BaseGeometry'>
 
-Test de la méthode integer_validator avec un entier valide:
->>> bg = BaseGeometry()
+Test with an integer : OK
 >>> bg.integer_validator("my_int", 12)
-(None)
+12
+>>> bg.integer_validator("width", 89)
+89
 
-Test de la méthode integer_validator avec une chaîne de caractères (devrait échouer):
->>> bg.integer_validator("name", "John")
-Exception: name must be an integer
+Test with a string : Error
+>>> bg.integer_validator("my_int", "Billy")
+Traceback (most recent call last):
+    raise TypeError("<name> must be an integer")
+TypeError: <name> must be an integer
 
-Test de la méthode integer_validator avec un entier négatif (devrait échouer):
->>> bg.integer_validator("age", -10)
-Exception: age must be greater than 0
+Test with None : 
+>>> bg.integer_validator("my_int", )
+Traceback (most recent call last):
+TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
 
-Test de la méthode integer_validator avec zéro (devrait échouer):
->>> bg.integer_validator("distance", 0)
-Exception: distance must be greater than 0
+Test with negative : 
+>>> bg.integer_validator("my_int", -41)
+Traceback (most recent call last):
+raise ValueError("<name> must be greater than 0")
+ValueError: <name> must be greater than 0
+
+Test with 0 : 
+>>> bg.integer_validator("my_int", 0)
+Traceback (most recent call last):
+raise ValueError("<name> must be greater than 0")
+ValueError: <name> must be greater than 0
+
+Test with float : 
+>>> bg.integer_validator("my_int", 12.5)
+Traceback (most recent call last):
+raise TypeError("<name> must be an integer")
+TypeError: <name> must be an integer
