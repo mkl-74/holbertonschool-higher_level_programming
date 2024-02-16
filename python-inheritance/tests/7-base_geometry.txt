@@ -33,3 +33,9 @@ Test with 0 :
 Traceback (most recent call last):
 raise ValueError("<name> must be greater than 0")
 ValueError: <name> must be greater than 0
+
+Test with float : 
+>>> bg.integer_validator("my_int", 12.5)
+Traceback (most recent call last):
+raise TypeError("<name> must be an integer")
+TypeError: <name> must be an integer
