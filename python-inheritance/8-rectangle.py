@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""write a empty class"""
+"""writ a class rectangle thath inherit from BaseGeometrie"""
 
 
 class BaseGeometry:
