@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""write a empty class"""
+"""write a class BaseGeometry"""
 
 
 class BaseGeometry:
@@ -9,9 +9,12 @@ class BaseGeometry:
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Validate or raise exception"""
+        """Validate or raise exception
+        Args :
+        name : name of the parameter(str)
+        value : value is an integer
+        """
         if not isinstance(value, int):
-            raise TypeError("{} must be an integer".format(name))
+            raise TypeError(f"{name} must be an integer")
         if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
-        return value
+            raise ValueError(f"{name} must be greater than 0")
