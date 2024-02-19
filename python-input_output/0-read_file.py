@@ -2,7 +2,7 @@
 """function that read a text file"""
 
 
-def read_file(filename="my_file_0.txt"):
+def read_file(filename=""):
     """
     Read the files "my_file_0
     """
