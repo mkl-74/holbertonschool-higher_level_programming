@@ -9,5 +9,3 @@ def read_file(filename="my_file_0.txt"):
     with open(filename, 'r', encoding="utf-8") as f:
         file_content = f.read()
         print(file_content)
-
-    f.closed
