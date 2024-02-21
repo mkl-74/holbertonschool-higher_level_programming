@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """create a classe base"""
 
-class Base(__nb_objects = 0):
+class Base():
     """create a class Base"""
+    __nb_objects = 0
+    
     def __init__(self, id=None):
         
         if id is not None:
