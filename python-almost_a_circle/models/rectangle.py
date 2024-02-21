@@ -35,3 +35,5 @@ class Rectangle(Base):
         if not isinstance(value, (int, float)) or value <= 0:
             raise ValueError("Height must be a positive number")
         self.__height = value
+
+    @method.setter
