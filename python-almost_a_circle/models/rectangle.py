@@ -3,15 +3,15 @@
 from models.base import Base
 
 
-
 class Rectangle(Base):
-    def __init__(self, height, width, x = 0, y = 0, id = None):
+    """Create a class Rectangle inherit Base"""
+    def __init__(self, height, width, x=0, y=0, id=None):
         super().__init__(id)
         self.height = height
         self.width = width
         self.x = x
         self.y = y
-        
+
     @property
     def width(self):
         """allows access to the value of width as a property"""
