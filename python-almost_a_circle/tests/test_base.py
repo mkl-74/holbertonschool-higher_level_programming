@@ -34,6 +34,5 @@ class TestBase(unittest.TestCase):
         b6 = Base(-5)
         self.assertEqual(b6.id, -5)
 
-
     if __name__ == "__main__":
         unittest.main()
