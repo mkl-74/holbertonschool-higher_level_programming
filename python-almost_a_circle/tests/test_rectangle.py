@@ -30,6 +30,8 @@ class TestBase(unittest.TestCase):
         self.assertEqual(r2.id, 2)
         self.assertEqual(r3.id, 12)
 
+    def test_area(self):
+        
         
     
     
