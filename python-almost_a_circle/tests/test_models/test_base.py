@@ -13,6 +13,7 @@ def test_base_class():
     assert b2.id == 2
     assert b3.id == 3
 
+def spe_id():
     # Creating an object with a specific identifier
     b4 = Base(12)
     assert b4.id == 12
@@ -30,7 +31,7 @@ def test_base_class():
     # The identifier should remain automatic, as a string is not a valid identifier.
     assert b7.id == 5
 
-    # Additional test case: Check if __nb_objects is correctly updated
+    # Additional test : Check if __nb_objects is correctly updated
     assert Base.__nb_objects == 5
 
 if __name__ == "__main__":
