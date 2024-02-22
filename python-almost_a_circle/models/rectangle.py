@@ -46,7 +46,7 @@ class Rectangle(Base):
     def x(self):
         """allow acces to the value of x"""
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         """Setter method for x-coordinate."""
@@ -56,12 +56,12 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         else:
             self.__x = value
-        
+
     @property
     def y(self):
         """allow acces to the value of y"""
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         """Setter method for y-coordinate."""
@@ -72,7 +72,6 @@ class Rectangle(Base):
         else:
             self.__y = value
 
-
     def area(self):
         """return area"""
-        return(self.__width * self.__height)
+        return (self.__width * self.__height)
