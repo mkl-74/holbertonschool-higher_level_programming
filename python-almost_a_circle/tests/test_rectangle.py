@@ -6,11 +6,17 @@ from models.rectangle import Rectangle
 from models.base import Base
 
 
-class TestRectangle(unittest.TestCase):
+class TestBase(unittest.TestCase):
+
+    def setup(self):
+        """Reset base"""
+        Base.__nb_objects = 0
     
     def test_int_pos(self):
         r1 = Rectangle(10, 2)
         self.assertEqual(r1.id)
+        
+    def 
         
     
     
