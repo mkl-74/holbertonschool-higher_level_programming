@@ -31,8 +31,13 @@ class TestBase(unittest.TestCase):
         self.assertEqual(r3.id, 12)
 
     def test_area(self):
-        
-        
+        """test"""
+        r1 = Rectangle(3, 2)
+        self.assertEqual(r1.area())
+        r2 = Rectangle(2, 10)
+        self.assertEqual(r2.area())
+        r3 = Rectangle(8, 7, 0, 0, 12)
+        self.assertEqual(r3.area())
     
     
     
