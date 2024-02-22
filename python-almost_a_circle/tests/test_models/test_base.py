@@ -4,35 +4,38 @@
 import unittest
 from models.base import Base
 
-def test_base_class():
+def test_base_class(self):
     # Creating objects with unique identifiers
     b1 = Base()
     b2 = Base()
     b3 = Base()
-    assert b1.id == 1
-    assert b2.id == 2
-    assert b3.id == 3
+    self.assertEqual(b1.id == 1)
+    self.assertEqual(b2.id == 2)
+    self.assertEqual(b3.id == 3)
 
-def spe_id():
+def test_spe_id(self):
     # Creating an object with a specific identifier
     b4 = Base(12)
-    assert b4.id == 12
+    self.assertEqual(b4.id == 12)
 
+def test_incr_id(self)
     # Automatic increment of identifier
     b5 = Base()
-    assert b5.id == 4
+    self.assertEqual(b5.id == 4)
 
+def test_neg_id(self)
     # Negative identifier
     b6 = Base(-5)
-    assert b6.id == -5
+    self.assertEqual(b6.id == -5)
 
+def test_str_id(self)
     # Identifier as a string
     b7 = Base("abc")
-    # The identifier should remain automatic, as a string is not a valid identifier.
-    assert b7.id == 5
+    self.assertEqual(b7.id == 5)
 
+def test_add(self)
     # Additional test : Check if __nb_objects is correctly updated
-    assert Base.__nb_objects == 5
+    self.assertEqual(Base.__nb_objects == 5)
 
 if __name__ == "__main__":
     test_base_class()
