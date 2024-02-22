@@ -11,4 +11,10 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(10, 2)
         self.assertEqual(r1.id)
         
-        
+    
+    
+    
+    
+    
+    if __name__ == "__main__":
+        unittest.main()
