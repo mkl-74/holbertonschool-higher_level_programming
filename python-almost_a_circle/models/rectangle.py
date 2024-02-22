@@ -19,10 +19,13 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        """let define a value of width with a verification"""
-        if not isinstance(value, (int, float)) or value <= 0:
-            raise ValueError("Width must be a positive number")
-        self.__width = value
+        """"Setter method for width."""
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.__width = value
 
     @property
     def height(self):
@@ -31,10 +34,13 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        """let define a value of height with a verification"""
-        if not isinstance(value, (int, float)) or value <= 0:
-            raise ValueError("Height must be a positive number")
-        self.__height = value
+        """Setter method for height."""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        elif value <= 0:
+            raise ValueError("height must be > 0")
+        else:
+            self.__height = value
 
     @property
     def x(self):
