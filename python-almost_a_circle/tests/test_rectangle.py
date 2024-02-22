@@ -12,11 +12,15 @@ class TestBase(unittest.TestCase):
         """Reset base"""
         Base.__nb_objects = 0
     
-    def test_int_pos(self):
+    def test_nbr_id(self):
+        """test nbr_id"""
         r1 = Rectangle(10, 2)
-        self.assertEqual(r1.id)
+        r2 = Rectangle(2, 10)
+        r3 = Rectangle(8, 10)
+        self.assertEqual(r1.id, 1)
+        self.assertEqual(r2.id, 2)
+        self.assertEqual(r3.id, 3)
         
-    def 
         
     
     
