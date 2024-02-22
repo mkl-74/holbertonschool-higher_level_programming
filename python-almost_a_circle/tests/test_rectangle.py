@@ -38,10 +38,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(r2.area())
         r3 = Rectangle(8, 7, 0, 0, 12)
         self.assertEqual(r3.area())
-    
-    
-    
-    
-    
+
     if __name__ == "__main__":
         unittest.main()
