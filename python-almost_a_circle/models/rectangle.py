@@ -7,8 +7,8 @@ class Rectangle(Base):
     """Create a class Rectangle inherit Base"""
     def __init__(self, height, width, x=0, y=0, id=None):
         super().__init__(id)
-        self.height = height
         self.width = width
+        self.height = height
         self.x = x
         self.y = y
 
