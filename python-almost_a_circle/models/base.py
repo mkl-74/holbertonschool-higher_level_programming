@@ -8,12 +8,12 @@ import os
 
 class Base():
     """create a class Base"""
-    __nb_objects = 0
+    _nb_objects = 0
 
     def __init__(self, id=None):
         """id condition"""
         if id is not None:
             self.id = id
         else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+            Base._nb_objects += 1
+            self.id = Base._nb_objects
