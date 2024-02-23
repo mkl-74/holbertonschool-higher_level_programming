@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """create a classe base"""
-
-
 import json
 import os
 
