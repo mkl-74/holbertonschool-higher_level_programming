@@ -85,8 +85,3 @@ class Rectangle(Base):
         return "[rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.height, self.width)
 
-    def display(self):
-        for _ in range(self.y):
-            print()
-        for _ in range(self.width):
-            print((" " * self.x) + ("#" * self.height))
