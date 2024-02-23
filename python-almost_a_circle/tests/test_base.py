@@ -6,9 +6,9 @@ from models.base import Base
 
 class TestBase(unittest.TestCase):
 
-    def setup(self):
+    def setUp(self):
         """Reset base"""
-        Base.__nb_objects = 0
+        Base._nb_objects = 0
 
     def test_base_class(self):
         # Creating objects with unique identifiers
@@ -27,12 +27,13 @@ class TestBase(unittest.TestCase):
     def test_incr_id(self):
         # Automatic increment of identifier
         b5 = Base()
-        self.assertEqual(b5.id, 4)
+        self.assertEqual(b5.id, 1)
 
     def test_neg_id(self):
         # Negative identifier
         b6 = Base(-5)
         self.assertEqual(b6.id, -5)
 
-    if __name__ == "__main__":
+
+if __name__ == "__main__":
         unittest.main()

@@ -4,8 +4,8 @@ from models.rectangle import Rectangle
 from models.base import Base
 
 
-class TestBase(unittest.TestCase):
-
+class Testbase(unittest.TestCase):
+    """test base"""
     def setUp(self):
         """Reset base"""
         Base._nb_objects = 0
@@ -39,5 +39,6 @@ class TestBase(unittest.TestCase):
         r3 = Rectangle(8, 7, 0, 0, 12)
         self.assertEqual(r3.area(), 56)
 
-    if __name__ == "__main__":
-        unittest.main()
+
+if __name__ == "__main__":
+    unittest.main()
