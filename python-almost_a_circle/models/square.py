@@ -12,5 +12,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """return square"""
-        return "[square], ({}) {}/{} - {}".format(
+        return "[Square], ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.size)
