@@ -97,3 +97,7 @@ class Rectangle(Base):
         elif kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        self.dict = dict()
+        return (self.dict)
