@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Create a class Square"""
-
-
 from models.rectangle import Rectangle
 
 
