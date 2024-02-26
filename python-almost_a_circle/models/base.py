@@ -25,6 +25,7 @@ class Base():
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """return a json string representation to object files"""
         if list_objs is None:
             list_objs = []
         filename = cls.__name__ + ".json"
