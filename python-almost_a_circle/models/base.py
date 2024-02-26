@@ -32,3 +32,9 @@ class Base():
         with open(filename, mode="w", encoding="utf-8") as file:
             json_string = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
             file.write(json_string)
+
+    def from_json_string(json_string):
+        """return a list of dictionnaries"""
+        if json_string is None or json_string == "":
+            return[]
+        return json.loads(json_string)
