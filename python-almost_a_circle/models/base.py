@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """create a classe base"""
 import json
+from turtle import *
+
 
 
 class Base():
@@ -50,3 +52,17 @@ class Base():
             dummy_instance = cls(1)
         dummy_instance.update(**dictionary)
         return dummy_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """Return a list of instances from a JSON file"""
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, mode="r", encoding="utf-8") as file:
+                json_string = file.read()
+                dictionaries = cls.from_json_string(json_string)
+                instances = [cls.create(**d) for d in dictionaries]
+                return instances
+        except FileNotFoundError:
+            return []
+        
