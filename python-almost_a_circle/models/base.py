@@ -34,8 +34,19 @@ class Base():
                                               list_objs])
             file.write(json_string)
 
+    @staticmethod
     def from_json_string(json_string):
         """return a list of dictionnaries"""
         if json_string is None or json_string == "":
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Return an instance with all attributes already set"""
+        if cls.__name__ == "Rectangle":
+            dummy_instance = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy_instance = cls(1)
+        dummy_instance.update(**dictionary)
+        return dummy_instance
