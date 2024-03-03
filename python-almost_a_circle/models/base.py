@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-"""create a classe base"""
+"""create a class base"""
 import json
-from turtle import *
-
 
 
 class Base():
@@ -38,7 +36,7 @@ class Base():
 
     @staticmethod
     def from_json_string(json_string):
-        """return a list of dictionnaries"""
+        """return a list of dictionaries"""
         if json_string is None or json_string == "":
             return []
         return json.loads(json_string)

@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 import unittest
-from models.rectangle import Rectangle
+from ..models.rectangle import Rectangle
 from models.base import Base
 
 
-class Testbase(unittest.TestCase):
+class Test_base(unittest.TestCase):
     """test base"""
     def setUp(self):
         """Reset base"""
@@ -38,6 +38,13 @@ class Testbase(unittest.TestCase):
         self.assertEqual(r2.area(), 20)
         r3 = Rectangle(8, 7, 0, 0, 12)
         self.assertEqual(r3.area(), 56)
+
+    def tets_display(self):
+        """test display"""
+        r1 = Rectangle(4, 6)
+        self.assertEqual(r1.display(), 24)
+        r1 = Rectangle(2, 2)
+        self.assertEqual(r1.display(), 4)
 
 
 if __name__ == "__main__":
