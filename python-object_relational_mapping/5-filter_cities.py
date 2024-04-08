@@ -1,38 +1,22 @@
 #!/usr/bin/python3
-"""Lists cities of a given state"""
+""" Object-relational mapping"""
 
-import MySQLdb
-from sys import argv
+if __name__ == '__main__':
+    import sys
+    import MySQLdb
 
-if __name__ == "__main__":
-    # Check if the correct number of arguments is provided
-    if len(argv) != 5:
-        print("Usage: {} username password database_name state_name".format(argv[0]))
-        exit(1)
+    if len(sys.argv) != 5:
+        sys.exit('Use: 5-filter_cities.py <mysql username> <mysql password>'
+                    ' <database name> <state name>')
 
-    # Connect to the MySQL database
-    conn = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
-                           passwd=argv[2], db=argv[3], charset="utf8")
+    conn = MySQLdb.connect(host='localhost', port=3306, user=sys.argv[1],
+                    passwd=sys.argv[2], db=sys.argv[3], charset='utf8')
     cur = conn.cursor()
-
-    # Prepare the SQL query
-    query = """
-    SELECT GROUP_CONCAT(name ORDER BY id ASC SEPARATOR ', ')
-    FROM cities
-    JOIN states ON cities.state_id = states.id
-    WHERE states.name = %s
-    """
-
-    # Execute the query
-    cur.execute(query, (argv[4],))
-
-    # Fetch and display the result
-    result = cur.fetchone()
-    if result[0]:
-        print(result[0])
-    else:
-        print("No cities found for the given state.")
-
-    # Close the cursor and the database connection
+    cur.execute("SELECT cities.name FROM cities LEFT JOIN states "
+                "ON cities.state_id = states.id WHERE states.name = %s "
+                "ORDER BY cities.id ASC", (sys.argv[4], ))
+    query_rows = cur.fetchall()
+    cities = [row[0] for row in query_rows]
+    print(', '.join(cities))
     cur.close()
     conn.close()
