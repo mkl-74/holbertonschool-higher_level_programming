@@ -6,11 +6,9 @@ if __name__ == '__main__':
     import MySQLdb
 
     if len(sys.argv) != 5:
-        sys.exit('Use: 5-filter_cities.py <mysql username> <mysql password>'
-                    ' <database name> <state name>')
+        sys.exit('Use: 5-filter_cities.py <mysql username> <mysql password>'' <database name> <state name>')  # noqa
 
-    conn = MySQLdb.connect(host='localhost', port=3306, user=sys.argv[1],
-                    passwd=sys.argv[2], db=sys.argv[3], charset='utf8')
+    conn = MySQLdb.connect(host='localhost', port=3306, user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3], charset='utf8')  # noqa
     cur = conn.cursor()
     cur.execute("SELECT cities.name FROM cities LEFT JOIN states "
                 "ON cities.state_id = states.id WHERE states.name = %s "
